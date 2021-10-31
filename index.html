@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Taller 5</title>
+</head>
+<body >   
+    <h1> Taller 5 </h1>
+    <div class="Ejercicios">
+<!--EJERCICIO 1-->
+    <div class="Ej1">
+    <h2> Ejercicio 1 - Meses del año</h2>
+    <p> Cree un array llamado meses, este array deberá almacenar el nombre de los doce meses del año.
+        Muestre por pantalla el nombre de cada uno de ellos utilizando un bucle for.</p>
+    <script type="text/javascript" > 
+        var meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto','Septiembre', 'Octubre',
+        'Noviembre', 'Diciembre' );
+        for(var i=0; i <=11; i++){
+        document.write( "<br>"+meses[i]);
+        } 
+    </script>
+    </div>
+<!--EJERCICIO 2-->
+
+<div  class="Ej2">
+     <h2> Ejercicio 2 - Producto Alimenticio</h2>  
+   <p>Cree un script que defina un objeto llamado Producto_alimenticio, 
+    este objeto debe presentar las propiedades código, nombre y precio, 
+    además del método imprimeDatos, el cual escribe por pantalla los valores de sus propiedades. 
+    Posteriormente, cree tres instancias de este objeto y guárdelas en un array. Con la ayuda del bucle for,
+     utilice el método imprimeDatos para mostrar por pantalla los valores de los tres objetos instanciados.</p> 
+    <script type="text/javascript">
+
+/*Objeto con sus propiedades*/
+		function producto_alimenticio(codigo, nombre, precio){ 
+   			this.codigo = codigo;
+   			this.nombre = nombre;
+			this.precio = precio;
+   			this.imprimeDatos = imprimeDatosFinal; 
+ }
+ /*Método imprimir datos */
+ function imprimeDatosFinal(){ 
+   			document.write("<br><br> Código: " + this.codigo);
+   			document.write("<br> Nombre: " + this.nombre);
+   			document.write("<br> Precio: " + this.precio);
+		}
+/* Se lo guarda en un Array*/
+		var pro1 = new producto_alimenticio("1","Azúcar", "1.00");
+		var pro2 = new producto_alimenticio("2","Arroz", "1.00");
+		var pro3 = new producto_alimenticio("3","Harina", "0.50");	
+		var productos = new Array(pro1, pro2, pro3);
+/*For usando el metodo imprimeDatos*/	
+		for( var i=0; i<productos.length; i++){
+			productos[i].imprimeDatos();
+		}
+	</script>
+</div>
+</div>
+</body>
+</html>
